@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Results</title>
+    <link rel="stylesheet" href="../css/resultStyling.css" />
+  </head>
+  <body>
+    <div class="result-container">
+      <div class="result">
+        <img
+          class="img-result"
+          src="../media/business-man-holding-job-done-check-sign_3446-560.jpg"
+          alt="result-img"
+        />
+      </div>
+      <div class="result-show">
+        <h1>Exam Results</h1>
+        <p id="score"></p>
+        <p id="status" class="status"></p>
+      </div>
+    </div>
+
+    <script>
+      window.onload = () => {
+        const score = parseInt(localStorage.getItem("score"));
+        const total = parseInt(localStorage.getItem("total"));
+        const percentage = parseFloat(localStorage.getItem("percentage"));
+
+        const scoreText = `Your score is: ${score} out of ${total}.`;
+        const statusText =
+          percentage >= 50
+            ? "Congratulations, You Passed The Exam"
+            : "Sorry, You failed in Exam";
+        const statusClass = percentage >= 50 ? "pass" : "fail";
+
+        document.getElementById("score").innerText = scoreText;
+        const statusElement = document.getElementById("status");
+        statusElement.innerText = statusText;
+        statusElement.classList.add(statusClass);
+
+        history.replaceState(null, document.title, window.location.pathname);
+      };
+    </script>
+  </body>
+</html>
