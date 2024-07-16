@@ -1,0 +1,297 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@200;300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+.body-contain {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  padding: 0 10px;
+}
+
+.body-contain::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url("../media/download\ 2.jpg"), #000;
+  background-position: center;
+  background-size: cover;
+}
+
+.wrapper {
+  width: 35%;
+  border-radius: 30px;
+  padding: 30px;
+  text-align: center;
+  border: 1px solid #bbb;
+  backdrop-filter: blur(800px);
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  height: 70vh;
+  justify-content: space-around;
+}
+
+.registeration-text {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #513d3d;
+}
+
+/* full Name */
+
+.input-field {
+  position: relative;
+  border-bottom: 2px solid #ccc;
+  margin-bottom: 30px;
+}
+
+.input-field label {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  color: #fff;
+  font-size: 16px;
+  pointer-events: none;
+  transition: 0.15s ease;
+  font-weight: bold;
+}
+
+.input-field input {
+  width: 100%;
+  height: 40px;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: #000000d4;
+}
+.input-field input::placeholder {
+  color: rgba(255, 255, 255, 0.737);
+  font-size: 16px;
+}
+
+.input-field input:focus ~ label,
+.input-field input:valid ~ label {
+  top: 0px;
+  transform: translateY(-120%);
+}
+
+/* email address */
+.email-field {
+  position: relative;
+  border-bottom: 2px solid #ccc;
+  margin-bottom: 30px;
+}
+
+.email-field label {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  color: #fff;
+  font-size: 16px;
+  pointer-events: none;
+  transition: 0.15s ease;
+  font-weight: bold;
+}
+
+.email-field input {
+  width: 100%;
+  height: 40px;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: #000000d4;
+}
+.email-field input::placeholder {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.709);
+}
+.email-field input:focus ~ label,
+.email-field input:valid ~ label {
+  top: 0px;
+  transform: translateY(-120%);
+}
+
+/* password */
+.password-field {
+  position: relative;
+  border-bottom: 2px solid #ccc;
+  margin-bottom: 30px;
+}
+
+.password-field label {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  color: #fff;
+  font-size: 16px;
+  pointer-events: none;
+  transition: 0.15s ease;
+  font-weight: bold;
+}
+
+.password-field input {
+  width: 100%;
+  height: 40px;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: #000000d4;
+}
+
+.password-field input::placeholder {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.695);
+}
+
+.password-field input:focus ~ label,
+.password-field input:valid ~ label {
+  top: 0px;
+  transform: translateY(-120%);
+}
+
+/* rePassword-field */
+.rePassword-field {
+  position: relative;
+  border-bottom: 2px solid #ccc;
+  margin-bottom: 30px;
+}
+
+.rePassword-field label {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  color: #fff;
+  font-size: 16px;
+  pointer-events: none;
+  transition: 0.15s ease;
+  font-weight: bold;
+}
+
+.rePassword-field input {
+  width: 100%;
+  height: 40px;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: #000000d4;
+}
+
+.rePassword-field input::placeholder {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.709);
+}
+
+.rePassword-field input:focus ~ label,
+.rePassword-field input:valid ~ label {
+  top: 0px;
+  transform: translateY(-120%);
+}
+
+.wrapper a {
+  color: #efefef;
+  text-decoration: none;
+}
+
+.wrapper a:hover {
+  text-decoration: underline;
+}
+
+.register-btn {
+  background: #362b2bb8;
+  color: #fff;
+  font-weight: 700;
+  border: none;
+  padding: 12px 20px;
+  cursor: pointer;
+  border-radius: 15px;
+  font-size: 20px;
+  border: 2px solid transparent;
+  transition: 0.3s ease;
+}
+
+.register-btn:hover {
+  color: #fff;
+  border-color: #fff;
+  background: rgba(255, 255, 255, 0.15);
+}
+span {
+  display: none;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+  .wrapper {
+    width: 50%;
+  }
+}
+
+@media (max-width: 992px) {
+  .wrapper {
+    width: 60%;
+  }
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    width: 80%;
+  }
+
+  .registeration-text {
+    font-size: 1.5rem;
+  }
+
+  .register-btn {
+    padding: 10px 15px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 576px) {
+  .wrapper {
+    width: 90%;
+  }
+
+  .registeration-text {
+    font-size: 1.2rem;
+  }
+
+  .register-btn {
+    padding: 8px 12px;
+    font-size: 16px;
+  }
+}
+@media (max-width: 320px) {
+  .wrapper {
+    width: 90%;
+  }
+
+  .registeration-text {
+    font-size: 1.2rem;
+  }
+  input:valid ~ label {
+    font-size: 15px;
+  }
+  .register-btn {
+    padding: 8px 12px;
+    font-size: 16px;
+  }
+}

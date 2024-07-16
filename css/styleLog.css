@@ -1,0 +1,202 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@200;300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+.body-contain-login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  padding: 0 10px;
+}
+
+.body-contain-login::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url("../media/download\ 2.jpg"), #000;
+  background-position: center;
+  background-size: cover;
+}
+
+.wrapper {
+  width: 35%;
+  border-radius: 30px;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #bbb;
+  backdrop-filter: blur(250px);
+}
+
+.signin_form {
+  display: flex;
+  flex-direction: column;
+  height: 70vh;
+  justify-content: space-evenly;
+}
+
+.signin-text {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #262222;
+}
+
+/* email address */
+.login_email {
+  position: relative;
+  border-bottom: 2px solid #ccc;
+}
+
+.login_email label {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  color: #fff;
+  font-size: 16px;
+  pointer-events: none;
+  transition: 0.15s ease;
+  font-weight: bold;
+}
+
+.login_email input {
+  width: 100%;
+  height: 40px;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: #000000d4;
+}
+.login_email input::placeholder {
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.709);
+}
+.login_email input:focus ~ label,
+.login_email input:valid ~ label {
+  top: 0px;
+  transform: translateY(-120%);
+}
+
+/* password */
+.login_password {
+  position: relative;
+  border-bottom: 2px solid #ccc;
+  margin-bottom: 10px;
+}
+
+.login_password label {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  color: #fff;
+  font-size: 16px;
+  pointer-events: none;
+  transition: 0.15s ease;
+  font-weight: bold;
+}
+
+.login_password input {
+  width: 100%;
+  height: 40px;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: #000000d4;
+}
+
+.login_password input::placeholder {
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.695);
+}
+
+.login_password input:focus ~ label,
+.login_password input:valid ~ label {
+  top: 0px;
+  transform: translateY(-120%);
+}
+
+.wrapper a {
+  color: #efefef;
+  text-decoration: none;
+}
+
+.wrapper a:hover {
+  text-decoration: underline;
+}
+
+.login_supmit_btn {
+  background: #362b2bb8;
+  color: #fff;
+  font-weight: 700;
+  border: none;
+  padding: 12px 20px;
+  cursor: pointer;
+  border-radius: 15px;
+  font-size: 20px;
+  border: 2px solid transparent;
+  transition: 0.3s ease;
+}
+
+.login_supmit_btn:hover {
+  color: #fff;
+  border-color: #fff;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    width: 70%;
+  }
+
+  .signin-text {
+    font-size: 1.5rem;
+  }
+
+  .login_email input,
+  .login_password input {
+    height: 35px;
+    font-size: 14px;
+  }
+
+  .login_supmit_btn {
+    padding: 10px 15px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 320px) {
+  .wrapper {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .signin_form {
+    height: auto;
+  }
+
+  .signin-text {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+  }
+
+  .login_email input,
+  .login_password input {
+    height: 30px;
+    font-size: 14px;
+  }
+
+  .login_supmit_btn {
+    padding: 8px 12px;
+    font-size: 16px;
+  }
+}
