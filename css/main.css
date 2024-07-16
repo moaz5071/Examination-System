@@ -1,0 +1,106 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.question-container,
+.mark-container {
+  width: 38%;
+}
+.bg-light {
+  width: 60%;
+}
+
+.question {
+  margin-bottom: 20px;
+}
+
+.question-title {
+  font-weight: bold;
+}
+
+.answers {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.answers li {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.answers li input[type="radio"] {
+  margin-right: 10px;
+}
+
+.controls {
+  margin-top: 20px;
+  width: 80%;
+}
+
+.controls .btn-group {
+  display: flex;
+}
+
+.controls .btn-group button {
+  margin-right: 10px; /* Add margin between Previous and Next buttons */
+}
+
+.result {
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.progress-bar-container {
+  width: 80%;
+  background-color: #f3f3f3;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.progress-bar {
+  width: 0%;
+  height: 20px;
+  background-color: #4caf50;
+}
+
+#mark-list {
+  padding: 10px;
+}
+
+#mark-list button {
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+  border: none;
+  background-color: #4caf50;
+  color: white;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
