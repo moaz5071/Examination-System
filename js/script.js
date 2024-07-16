@@ -111,7 +111,7 @@ let markButton = document.getElementById("mark-btn");
 let currentQuestionIndex = 0;
 let selectedAnswers = new Array(questions.length).fill(null);
 let markedQuestions = [];
-const examDuration = 10 * 1; // 10 seconds
+const examDuration = 60 * 1; // 60 seconds
 let timeRemaining = examDuration;
 
 function shuffle(array) {
@@ -185,7 +185,7 @@ function saveAnswer() {
   );
   if (selectedAnswer) {
     selectedAnswers[currentQuestionIndex] = selectedAnswer.value;
-    // Add 'selected' class to the chosen answer
+
     document
       .querySelectorAll(`input[name="question${currentQuestionIndex}"]`)
       .forEach((input) => {
